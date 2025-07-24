@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = "AIzaSyBu3T0jtto6RbO7GtL46_2HcH0xOT-keo8"
 if not GOOGLE_API_KEY:
     raise Exception("GOOGLE_API_KEY is not set in your environment variables.")
 
