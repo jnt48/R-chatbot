@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-GOOGLE_API_KEY = "AIzaSyBu3T0jtto6RbO7GtL46_2HcH0xOT-keo8"
+GOOGLE_API_KEY = "AIzaSyCIRk-SLlwcs3voJD1bH9AmchfjvfhMvMk"
 if not GOOGLE_API_KEY:
     raise Exception("GOOGLE_API_KEY is not set in your environment variables.")
 
@@ -23,6 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ✅ Only message required in request
 class ChatMessage(BaseModel):
     message: str
 
@@ -40,3 +41,4 @@ def chatbot_interaction(chat: ChatMessage):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error in chatbot interaction: {str(e)}")
+    
