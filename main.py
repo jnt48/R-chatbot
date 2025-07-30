@@ -23,7 +23,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Only message required in request
 class ChatMessage(BaseModel):
     message: str
 
